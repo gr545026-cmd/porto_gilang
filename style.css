@@ -1,0 +1,685 @@
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f7fb;
+    color: #1b2940;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CONTAINER */
+.gilang_page {
+    max-width: 1120px;
+    margin: 28px auto;
+    background: #fff;
+    box-shadow: 0 8px 35px #1b315012;
+    overflow: hidden;
+}
+
+/* HEADER */
+.gilang_header {
+    height: 62px;
+    padding: 0 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 1px solid #edf1f7;
+    position: relative;
+}
+
+.gilang_brand {
+    text-decoration: none;
+    color: #20324d;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: -.4px;
+}
+
+.gilang_brand b {
+    color: #1970d4;
+}
+
+.gilang_code {
+    color: #1676e8;
+    font-weight: 800;
+    margin-right: 7px;
+    font-size: 19px;
+}
+
+.gilang_nav {
+    display: flex;
+    gap: 30px;
+}
+
+.gilang_nav a {
+    font-size: 12px;
+    color: #34445c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gilang_nav a:hover {
+    color: #1474df;
+}
+
+.gilang_menu_check {
+    display: none;
+}
+
+.gilang_toggle {
+    display: none;
+    font-size: 24px;
+    color: #1c3557;
+    cursor: pointer;
+}
+
+/* HERO */
+.gilang_hero {
+    min-height: 300px;
+    padding: 36px 6%;
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    align-items: center;
+    background: linear-gradient(
+        110deg,
+        #f3f7ff 0%,
+        #eaf2ff 58%,
+        #d9e9ff 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.gilang_hero_copy {
+    position: relative;
+    z-index: 2;
+}
+
+.gilang_eyebrow {
+    font-weight: 600;
+    margin: 0 0 2px;
+    color: #263b5a;
+}
+
+.gilang_hero h1 {
+    font-size: 43px;
+    line-height: 1.08;
+    letter-spacing: -1.8px;
+    margin: 0;
+    color: #152d50;
+}
+
+.gilang_hero h1 span {
+    color: #1474df;
+}
+
+.gilang_hero h2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 9px 0;
+    color: #40516c;
+}
+
+.gilang_intro {
+    max-width: 420px;
+    color: #53647d;
+    font-size: 12px;
+    margin: 8px 0 18px;
+}
+
+/* BUTTON */
+.gilang_actions {
+    display: flex;
+    gap: 10px;
+}
+
+.gilang_button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.gilang_primary {
+    background: #1474df;
+    color: #fff;
+    box-shadow: 0 4px 10px #1474df30;
+}
+
+.gilang_outline {
+    border: 1px solid #1474df;
+    color: #1474df;
+    background: #ffffff80;
+}
+
+/* HERO ILLUSTRATION */
+.gilang_hero_art {
+    height: 235px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gilang_blob {
+    position: absolute;
+    width: 280px;
+    height: 235px;
+    background: #c8ddfb;
+    border-radius: 58% 42% 62% 38%;
+    transform: rotate(-18deg);
+    right: 8%;
+    top: 0;
+}
+
+.gilang_laptop {
+    position: relative;
+    z-index: 1;
+    width: 250px;
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 14px 10px #17365b30);
+}
+
+.gilang_screen {
+    height: 150px;
+    border: 8px solid #1a2b45;
+    border-bottom-width: 12px;
+    border-radius: 10px 10px 4px 4px;
+    background: linear-gradient(145deg, #132e52, #07172d);
+    display: grid;
+    place-items: center;
+    color: #51a9ff;
+    font-size: 54px;
+    font-weight: 800;
+    font-family: monospace;
+}
+
+.gilang_base {
+    height: 12px;
+    width: 275px;
+    margin-left: -13px;
+    background: linear-gradient(#d7e1ef, #8496ad);
+    clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
+    border-radius: 0 0 8px 8px;
+}
+
+/* PLANT */
+.gilang_plant {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 33px;
+    width: 58px;
+    height: 100px;
+}
+
+.gilang_plant i {
+    position: absolute;
+    bottom: 27px;
+    left: 25px;
+    width: 22px;
+    height: 55px;
+    background: #3b9b76;
+    border-radius: 100% 0 100% 0;
+    transform-origin: bottom;
+    transform: rotate(-38deg);
+}
+
+.gilang_plant i:nth-child(2) {
+    transform: rotate(35deg);
+    background: #61b58c;
+    left: 28px;
+}
+
+.gilang_plant i:nth-child(3) {
+    transform: rotate(-65deg);
+    height: 42px;
+    left: 12px;
+}
+
+.gilang_plant i:nth-child(4) {
+    transform: rotate(65deg);
+    height: 43px;
+    left: 30px;
+}
+
+.gilang_plant b {
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 48px;
+    height: 28px;
+    background: #e5edf5;
+    border-radius: 4px 4px 12px 12px;
+}
+
+.gilang_spark {
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+}
+
+.gilang_spark_one {
+    top: 15px;
+    left: 8%;
+}
+
+.gilang_spark_two {
+    bottom: 18px;
+    right: 27%;
+}
+
+/* SECTION */
+.gilang_section {
+    padding: 25px 6% 8px;
+}
+
+.gilang_section_title {
+    margin-bottom: 15px;
+}
+
+.gilang_section_title h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    color: #1c2f4b;
+    letter-spacing: -.5px;
+}
+
+.gilang_section_title span {
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: #1674dd;
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+/* ABOUT */
+.gilang_about_grid {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 35px;
+    align-items: center;
+}
+
+.gilang_about_grid p {
+    margin: 0 0 16px;
+    color: #56657a;
+    font-size: 12px;
+    max-width: 650px;
+}
+
+.gilang_meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    color: #4c5f79;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.gilang_profile {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 8px;
+    background: #eaf0f8;
+}
+
+/* SKILLS */
+.gilang_skills_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 9px;
+}
+
+.gilang_skill {
+    min-height: 39px;
+    background: #f3f6fb;
+    border: 1px solid #edf1f7;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #41516a;
+}
+
+.gilang_skill b {
+    font-size: 15px;
+    min-width: 17px;
+    text-align: center;
+}
+
+.gilang_html { color: #e85c36; }
+.gilang_css { color: #2775cf; }
+.gilang_js { color: #b18b00; }
+.gilang_php { color: #586b9c; font-size: 11px !important; }
+.gilang_sql { color: #2786a6; }
+.gilang_laravel { color: #e85b51; }
+.gilang_bootstrap { color: #7952b5; }
+.gilang_react { color: #42b8d5; }
+.gilang_python { font-size: 17px !important; }
+.gilang_power { color: #d6a900; }
+
+/* PROJECTS */
+.gilang_projects_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.gilang_project {
+    border: 1px solid #e7edf5;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 3px 9px #1c31500c;
+    background: #fff;
+}
+
+.gilang_project_art {
+    height: 95px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* DASHBOARD */
+.gilang_dashboard {
+    background: linear-gradient(135deg, #b9dfff, #e8f5ff);
+    padding: 14px 16px;
+}
+
+.gilang_mini_nav {
+    height: 10px;
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 9px;
+    width: 100%;
+}
+
+.gilang_chart {
+    height: 40px;
+    width: 48%;
+    background: #fff;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+}
+
+.gilang_chart:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 7px;
+    height: 20px;
+    border-bottom: 3px solid #2886d7;
+    border-left: 3px solid #2886d7;
+    transform: skewY(-20deg);
+}
+
+.gilang_bars {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    height: 40px;
+    margin-left: 55%;
+}
+
+.gilang_bars i {
+    width: 13%;
+    background: #55a6e8;
+    height: 45%;
+}
+
+.gilang_bars i:nth-child(2) { height: 85%; }
+.gilang_bars i:nth-child(3) { height: 65%; }
+.gilang_bars i:nth-child(4) { height: 100%; }
+
+/* MAP */
+.gilang_map {
+    background:
+        repeating-linear-gradient(
+            30deg,
+            transparent 0 18px,
+            #ffffff70 19px 21px
+        ),
+        repeating-linear-gradient(
+            120deg,
+            transparent 0 25px,
+            #ffffff70 26px 28px
+        ),
+        linear-gradient(135deg, #d6edcf, #75b77c);
+}
+
+.gilang_map span {
+    position: absolute;
+    font-size: 24px;
+}
+
+.gilang_map span:nth-child(1) {
+    left: 22%;
+    top: 18%;
+}
+
+.gilang_map span:nth-child(2) {
+    left: 58%;
+    top: 45%;
+}
+
+.gilang_map span:nth-child(3) {
+    left: 78%;
+    top: 8%;
+}
+
+/* STORE */
+.gilang_store {
+    background: linear-gradient(135deg, #b9dcff, #e6f3ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gilang_awning {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #e65e4d;
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 4px solid #e65e4d;
+}
+
+.gilang_shop {
+    background: #fff;
+    color: #54718d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    padding: 8px 17px;
+    box-shadow: 0 5px 9px #1a3c5a18;
+}
+
+.gilang_store_alt {
+    background: linear-gradient(135deg, #c7e5ff, #e7f3ff);
+}
+
+/* PROJECT TEXT */
+.gilang_project_body {
+    padding: 10px 11px 12px;
+}
+
+.gilang_project_body h3 {
+    font-size: 12px;
+    margin: 0 0 3px;
+    color: #253a59;
+}
+
+.gilang_project_body p {
+    font-size: 10px;
+    line-height: 1.45;
+    color: #6b7b90;
+    margin: 0 0 8px;
+    min-height: 29px;
+}
+
+.gilang_project_body a {
+    font-size: 10px;
+    color: #1474df;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* FOOTER */
+.gilang_footer {
+    margin-top: 25px;
+    background: #14243f;
+    color: #fff;
+    padding: 17px 6%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    font-size: 10px;
+}
+
+.gilang_footer div {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.gilang_footer small {
+    font-size: 9px;
+    color: #b9c7da;
+}
+
+.gilang_footer a {
+    color: #e3ebf7;
+    text-decoration: none;
+}
+
+.gilang_copyright {
+    width: 100%;
+    border-top: 1px solid #ffffff24;
+    padding-top: 9px;
+}
+
+/* TABLET */
+@media(max-width: 760px) {
+    .gilang_page {
+        margin: 0;
+    }
+
+    .gilang_hero {
+        grid-template-columns: 1fr;
+        padding: 32px 7% 15px;
+    }
+
+    .gilang_hero_art {
+        height: 190px;
+    }
+
+    .gilang_hero h1 {
+        font-size: 36px;
+    }
+
+    .gilang_laptop {
+        transform: scale(.82) rotate(-5deg);
+    }
+
+    .gilang_plant {
+        right: 7%;
+    }
+
+    .gilang_skills_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gilang_projects_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media(max-width: 520px) {
+    .gilang_header {
+        height: 58px;
+    }
+
+    .gilang_toggle {
+        display: block;
+    }
+
+    .gilang_nav {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        top: 58px;
+        left: 0;
+        right: 0;
+        padding: 15px 7%;
+        background: white;
+        box-shadow: 0 8px 12px #152b4818;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* MENU TANPA JAVASCRIPT */
+    .gilang_menu_check:checked ~ .gilang_nav {
+        display: flex;
+    }
+
+    .gilang_about_grid {
+        grid-template-columns: 1fr 105px;
+        gap: 15px;
+    }
+
+    .gilang_profile {
+        width: 105px;
+        height: 110px;
+    }
+
+    .gilang_meta {
+        gap: 8px 13px;
+    }
+
+    .gilang_section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .gilang_projects_grid {
+        gap: 9px;
+    }
+
+    .gilang_project_art {
+        height: 78px;
+    }
+
+    .gilang_footer {
+        gap: 12px;
+    }
+
+    .gilang_footer div {
+        width: 100%;
+    }
+}
